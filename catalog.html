@@ -435,11 +435,7 @@ placeholder="🔍 جستجو در کاتالوگ‌ها...">
 
 
 <div class="catalog-card">
-<div class="badge">
 
-✨ جدیدترین کاتالوگ
-
-</div>
 
 
 <div class="cover">
@@ -451,7 +447,11 @@ alt="کاتالوگ محرم ۱۴۰۵">
 </div>
 
 <div class="catalog-card">
+<div class="badge">
 
+✨ جدیدترین کاتالوگ
+
+</div>
 
 <div class="cover">
 
@@ -576,24 +576,27 @@ href="view-catalog.html?catalog=moharram1405">
 
 
 </div>
-
 <script>
+
+document.addEventListener("DOMContentLoaded",function(){
 
 
 const searchInput =
 document.getElementById("catalogSearch");
 
 
-
 const cards =
 document.querySelectorAll(".catalog-card");
 
 
+if(!searchInput) return;
 
-searchInput.addEventListener("input", function(){
 
 
-const value =
+searchInput.addEventListener("input",function(){
+
+
+let value =
 this.value.trim().toLowerCase();
 
 
@@ -601,36 +604,32 @@ this.value.trim().toLowerCase();
 cards.forEach(function(card){
 
 
-const text =
-card.innerText.toLowerCase();
+let text =
+card.textContent.toLowerCase();
 
 
 
-if(text.includes(value)){
-
+if(text.indexOf(value) !== -1){
 
 card.style.display="block";
 
-
 }else{
 
-
 card.style.display="none";
-
 
 }
 
 
-
 });
 
 
 });
 
+
+});
 
 
 </script>
-
 </body>
 
 </html>
