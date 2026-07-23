@@ -249,9 +249,7 @@ alt="محصولات مهدوی">
 <div class="pdf-box">
 
 
-<iframe
-
-src="https://drive.google.com/file/d/1Q-Mbx2o6zyPlv8MCFvtwikiuydIsW7MO/preview">
+<iframe id="pdfViewer">
 
 </iframe>
 
@@ -297,6 +295,27 @@ href="catalog.html">
 
 </div>
 
+  <script>
+
+const catalogs = {
+
+moharram1405:
+"https://drive.google.com/file/d/1Q-Mbx2o6zyPlv8MCFvtwikiuydIsW7MO/preview"
+
+};
+
+
+const params = new URLSearchParams(window.location.search);
+
+
+const selected = params.get("catalog") || "moharram1405";
+
+
+document.getElementById("pdfViewer").src =
+catalogs[selected];
+
+
+</script>
 
 </body>
 
