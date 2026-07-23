@@ -578,44 +578,40 @@ href="view-catalog.html?catalog=moharram1405">
 </div>
 <script>
 
-document.addEventListener("DOMContentLoaded",function(){
+window.addEventListener("load", function(){
 
 
-const searchInput =
-document.getElementById("catalogSearch");
-
-
-const cards =
-document.querySelectorAll(".catalog-card");
+const searchInput = document.getElementById("catalogSearch");
 
 
 if(!searchInput) return;
 
 
 
-searchInput.addEventListener("input",function(){
+searchInput.addEventListener("input", function(){
 
 
-let value =
-this.value.trim().toLowerCase();
+let value = this.value.trim().toLowerCase();
+
+
+let cards = document.querySelectorAll(".catalog-card");
 
 
 
 cards.forEach(function(card){
 
 
-let text =
-card.textContent.toLowerCase();
+let text = card.innerText.toLowerCase();
 
 
 
-if(text.indexOf(value) !== -1){
+if(text.includes(value)){
 
-card.style.display="block";
+card.style.display = "";
 
 }else{
 
-card.style.display="none";
+card.style.display = "none";
 
 }
 
@@ -627,7 +623,6 @@ card.style.display="none";
 
 
 });
-
 
 </script>
 </body>
