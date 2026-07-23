@@ -578,40 +578,68 @@ href="view-catalog.html?catalog=moharram1405">
 </div>
 <script>
 
-window.addEventListener("load", function(){
+window.addEventListener("load",function(){
 
 
-const searchInput = document.getElementById("catalogSearch");
+const searchInput =
+document.getElementById("catalogSearch");
+
 
 
 if(!searchInput) return;
 
 
 
-searchInput.addEventListener("input", function(){
+function normalizeText(text){
+
+return text
+
+.replace(/ي/g,"ی")
+
+.replace(/ك/g,"ک")
+
+.replace(/\s+/g," ")
+
+.trim()
+
+.toLowerCase();
+
+}
 
 
-let value = this.value.trim().toLowerCase();
+
+searchInput.addEventListener("input",function(){
 
 
-let cards = document.querySelectorAll(".catalog-card");
+let value =
+normalizeText(this.value);
+
+
+
+let cards =
+document.querySelectorAll(".catalog-card");
 
 
 
 cards.forEach(function(card){
 
 
-let text = card.innerText.toLowerCase();
+let text =
+normalizeText(card.innerText);
 
 
 
 if(text.includes(value)){
 
-card.style.display = "";
+
+card.style.display="";
+
 
 }else{
 
-card.style.display = "none";
+
+card.style.display="none";
+
 
 }
 
@@ -621,17 +649,6 @@ card.style.display = "none";
 
 });
 
-
-});
-
-</script>
-  <script>
-
-window.addEventListener("load",function(){
-
-console.log(
-document.querySelectorAll(".catalog-card").length
-);
 
 });
 
