@@ -38,7 +38,7 @@ color:#17372d;
 
 .container{
 
-max-width:520px;
+max-width:600px;
 
 margin:auto;
 
@@ -54,24 +54,23 @@ text-align:center;
 
 .logo{
 
-width:100px;
+width:105px;
 
-height:100px;
-
-object-fit:cover;
+height:105px;
 
 border-radius:50%;
 
+object-fit:cover;
+
 background:white;
 
-padding:7px;
+padding:8px;
 
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 
-margin:10px auto 15px;
+margin-bottom:15px;
 
 }
-
 
 
 
@@ -96,21 +95,35 @@ line-height:2;
 
 color:#555;
 
+margin-bottom:25px;
+
 }
 
 
 
 
 
-.card{
+.library{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+
+
+
+.catalog-card{
 
 background:white;
 
-border-radius:25px;
+border-radius:28px;
 
-padding:22px;
-
-margin-top:25px;
+padding:18px;
 
 box-shadow:0 10px 30px rgba(0,0,0,.12);
 
@@ -121,45 +134,71 @@ border:1px solid rgba(23,107,74,.12);
 
 
 
+.cover{
 
-.catalog-item{
+height:260px;
 
-background:#f4fbf7;
+border-radius:20px;
 
-border-radius:18px;
+background:linear-gradient(135deg,#176b4a,#d4b35b);
 
-padding:18px;
+display:flex;
 
-margin-bottom:15px;
+align-items:center;
 
-border-right:5px solid #176b4a;
+justify-content:center;
 
-text-align:right;
+color:white;
+
+font-size:22px;
+
+font-weight:bold;
+
+line-height:2;
+
+padding:20px;
+
+box-shadow:inset 0 0 30px rgba(255,255,255,.2);
 
 }
 
 
 
 
-.catalog-title{
 
-font-size:17px;
+.catalog-name{
+
+font-size:18px;
 
 font-weight:bold;
 
 color:#176b4a;
 
-margin-bottom:12px;
+margin:18px 0 12px;
 
 }
 
 
 
-.catalog-btn{
+.catalog-info{
+
+font-size:14px;
+
+color:#666;
+
+line-height:2;
+
+}
+
+
+
+
+
+.btn{
 
 display:block;
 
-text-align:center;
+margin-top:15px;
 
 background:#176b4a;
 
@@ -167,16 +206,13 @@ color:white;
 
 text-decoration:none;
 
-padding:12px;
+padding:14px;
 
-border-radius:14px;
+border-radius:16px;
 
-font-size:15px;
-
-margin-top:10px;
+font-weight:bold;
 
 }
-
 
 
 
@@ -186,7 +222,7 @@ margin-top:25px;
 
 background:#fff8e7;
 
-border-radius:18px;
+border-radius:20px;
 
 padding:15px;
 
@@ -198,33 +234,11 @@ line-height:2;
 
 
 
-
-
-.back-btn{
-
-display:block;
-
-margin-top:25px;
-
-color:#176b4a;
-
-text-decoration:none;
-
-font-size:14px;
-
-}
-
-
-
-
-
 .footer{
 
 margin-top:25px;
 
 color:#176b4a;
-
-font-size:14px;
 
 font-weight:600;
 
@@ -233,9 +247,11 @@ font-weight:600;
 
 
 
+
 </style>
 
 </head>
+
 
 
 <body>
@@ -247,9 +263,7 @@ font-weight:600;
 
 <img class="logo"
 
-src="https://drive.google.com/thumbnail?id=1305fG4bYVqjBx90hu2cRnQ4hCTVmNA6T&sz=w500"
-
-alt="محصولات مهدوی">
+src="https://drive.google.com/thumbnail?id=1305fG4bYVqjBx90hu2cRnQ4hCTVmNA6T&sz=w500">
 
 
 
@@ -265,7 +279,7 @@ alt="محصولات مهدوی">
 
 <div class="subtitle">
 
-کاتالوگ‌های محصولات را مشاهده کنید و پس از انتخاب محصول، کد آن را برای ثبت سفارش استفاده نمایید.
+کاتالوگ‌های محصولات را مشاهده کنید و محصول مورد نظر خود را انتخاب نمایید.
 
 </div>
 
@@ -275,51 +289,70 @@ alt="محصولات مهدوی">
 
 
 
-<div class="card">
+<div class="library">
 
 
 
-<div class="catalog-item">
 
 
-<div class="catalog-title">
+<div class="catalog-card">
 
-🌙 کاتالوگ نمونه
+
+
+<div class="cover">
+
+🌹
+
+<br>
+
+کاتالوگ محصولات مهدوی
+
+<br>
+
+محرم ۱۴۰۵
 
 </div>
 
 
-<a class="catalog-btn"
+
+
+
+<div class="catalog-name">
+
+🌙 کاتالوگ محرم ۱۴۰۵
+
+</div>
+
+
+
+<div class="catalog-info">
+
+مشاهده محصولات، کد محصول، سایز و مشخصات کالا
+
+</div>
+
+
+
+
+<a class="btn"
 
 href="view-catalog.html">
 
-مشاهده کاتالوگ
+📖 مشاهده کاتالوگ
 
 </a>
 
 
-</div>
-
-
-
-
-<!--
-برای ماه‌های بعدی فقط همین بخش را کپی کنید
-
-<div class="catalog-item">
-
-<div class="catalog-title">
-🌙 نام ماه
-</div>
-
-<a class="catalog-btn"
-href="view-catalog.html">
-مشاهده کاتالوگ
-</a>
 
 </div>
 
--->
+
+
+
+
+
+</div>
+
 
 
 
@@ -327,35 +360,16 @@ href="view-catalog.html">
 
 <div class="note">
 
-🌹 کد محصول، جنس پارچه و سایز محصولات در داخل کاتالوگ درج شده است.
+🌹 برای انتخاب محصول، کد درج شده در کاتالوگ را یادداشت کنید و سپس سفارش خود را ثبت نمایید.
 
 </div>
-
-
-
-</div>
-
-
-
-
-
-
-<a class="back-btn"
-
-href="index.html">
-
-بازگشت به صفحه اصلی
-
-</a>
-
-
 
 
 
 
 <div class="footer">
 
-اللهم عجل لولیک الفرج 🌹
+اللهم عجل لولیک الفرج
 
 </div>
 
