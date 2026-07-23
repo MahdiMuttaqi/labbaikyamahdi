@@ -552,7 +552,59 @@ href="view-catalog.html?catalog=moharram1405">
 
 </div>
 
+<script>
 
+
+const searchInput =
+document.getElementById("catalogSearch");
+
+
+
+const cards =
+document.querySelectorAll(".catalog-card");
+
+
+
+searchInput.addEventListener("input", function(){
+
+
+const value =
+this.value.trim().toLowerCase();
+
+
+
+cards.forEach(function(card){
+
+
+const text =
+card.innerText.toLowerCase();
+
+
+
+if(text.includes(value)){
+
+
+card.style.display="block";
+
+
+}else{
+
+
+card.style.display="none";
+
+
+}
+
+
+
+});
+
+
+});
+
+
+
+</script>
 
 </body>
 
