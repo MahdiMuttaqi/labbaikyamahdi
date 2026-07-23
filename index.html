@@ -4,11 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سامانه فروش لبیک یا مهدی</title>
-
+<title>محصولات مهدوی</title>
 
 <style>
 
@@ -26,20 +24,25 @@ margin:0;
 
 font-family:Vazirmatn,Tahoma,sans-serif;
 
-background:#f3faf7;
+background:linear-gradient(135deg,#1f9d75,#0f6b52);
 
-color:#1d3b32;
+min-height:100vh;
+
+color:#17372d;
 
 }
 
 
+
 .container{
+
+width:100%;
 
 max-width:520px;
 
 margin:auto;
 
-padding:25px 18px;
+padding:25px 18px 35px;
 
 text-align:center;
 
@@ -49,39 +52,72 @@ text-align:center;
 
 .logo{
 
-width:110px;
+width:120px;
 
-height:110px;
+height:120px;
 
 object-fit:contain;
 
-margin:20px auto;
+margin:15px auto;
+
+filter:drop-shadow(0 8px 15px rgba(0,0,0,.2));
 
 }
 
 
 
-h1{
 
-font-size:26px;
+/* صلوات متحرک */
 
-line-height:1.8;
 
-color:#176b4a;
+.salawat-box{
+
+overflow:hidden;
+
+background:rgba(255,255,255,.18);
+
+border-radius:20px;
+
+padding:12px;
+
+margin:15px 0 25px;
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
 
 }
 
 
 
-.subtitle{
+.salawat{
 
-font-size:17px;
+display:inline-block;
 
-color:#555;
+white-space:nowrap;
 
-margin-bottom:25px;
+animation:move 10s linear infinite;
 
 }
+
+
+
+@keyframes move{
+
+0%{
+transform:translateX(-120%);
+}
+
+100%{
+
+transform:translateX(120%);
+
+}
+
+}
+
 
 
 
@@ -89,31 +125,54 @@ margin-bottom:25px;
 
 background:white;
 
-border-radius:25px;
+border-radius:28px;
 
-padding:22px;
+padding:25px 20px;
 
-margin-top:20px;
+box-shadow:0 12px 35px rgba(0,0,0,.18);
 
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-line-height:2;
-
-font-size:16px;
+margin-top:15px;
 
 }
 
 
 
-.hadith{
+h1{
 
-background:#e8fff3;
+color:#176b4a;
 
-border-radius:20px;
+font-size:28px;
+
+margin:5px 0 20px;
+
+}
+
+
+
+.intro{
+
+font-size:16px;
+
+line-height:2.2;
+
+color:#444;
+
+}
+
+
+
+
+.message{
+
+margin-top:22px;
+
+background:#effaf5;
+
+border-right:5px solid #2ca879;
 
 padding:18px;
 
-margin-top:20px;
+border-radius:18px;
 
 font-size:15px;
 
@@ -123,27 +182,65 @@ line-height:2;
 
 
 
+
+.hadith{
+
+margin-top:22px;
+
+background:#fff8e7;
+
+border-radius:20px;
+
+padding:18px;
+
+line-height:2;
+
+font-size:15px;
+
+}
+
+
+
+.hadith strong{
+
+color:#176b4a;
+
+}
+
+
+
+
 .btn{
 
 display:block;
 
-margin:30px auto 10px;
+margin:30px auto 5px;
 
-background:#2ca879;
+background:#176b4a;
 
 color:white;
 
 text-decoration:none;
 
-padding:15px;
+padding:16px;
 
-border-radius:16px;
+border-radius:18px;
 
 font-size:18px;
 
 font-weight:bold;
 
-box-shadow:0 8px 18px rgba(44,168,121,.3);
+box-shadow:0 8px 20px rgba(23,107,74,.35);
+
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+transform:scale(1.03);
 
 }
 
@@ -151,11 +248,51 @@ box-shadow:0 8px 18px rgba(44,168,121,.3);
 
 .footer{
 
-margin-top:25px;
+margin-top:20px;
+
+color:white;
 
 font-size:13px;
 
-color:#777;
+line-height:2;
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.container{
+
+padding:20px 14px;
+
+}
+
+
+.logo{
+
+width:100px;
+
+height:100px;
+
+}
+
+
+h1{
+
+font-size:23px;
+
+}
+
+
+.card{
+
+padding:20px 15px;
+
+}
+
 
 }
 
@@ -173,22 +310,27 @@ color:#777;
 <div class="container">
 
 
+
 <img class="logo"
+
 src="https://drive.google.com/thumbnail?id=1305fG4bYVqjBx90hu2cRnQ4hCTVmNA6T&sz=w500"
-alt="لبیک یا مهدی">
+
+alt="محصولات مهدوی">
 
 
 
-<h1>
-سامانه فروش لبیک یا مهدی
-</h1>
 
 
-<div class="subtitle">
+<div class="salawat-box">
 
-اللهم عجل لولیک الفرج 🌹
+<div class="salawat">
+
+🌹 اللهم صل علی محمد و آل محمد و عجل فرجهم 🌹
 
 </div>
+
+</div>
+
 
 
 
@@ -196,16 +338,37 @@ alt="لبیک یا مهدی">
 <div class="card">
 
 
-به سامانه فروش لبیک یا مهدی خوش آمدید.
+<h1>
+
+محصولات مهدوی
+
+</h1>
 
 
-<br>
 
 
-این مجموعه با هدف ترویج فرهنگ انتظار و گسترش محبت به حضرت ولی‌عصر (عج)، محصولات مهدوی را با عشق و ارادت ارائه می‌کند.
+<div class="intro">
 
+این مجموعه با هدف ترویج فرهنگ انتظار، زنده نگه داشتن یاد و نام حضرت ولی‌عصر (عج) و گسترش محبت اهل‌بیت (ع)، محصولات مهدوی را با عشق و ارادت ارائه می‌کند.
+
+<br><br>
+
+تلاش ما این است که هر محصول، تنها یک کالا نباشد؛ بلکه یادآور امید، ایمان و عهد قلبی با امام زمان (عج) باشد.
 
 </div>
+
+
+
+
+
+<div class="message">
+
+✨
+
+هر محصول، یک یادآوری کوچک از عهد ما با حضرت صاحب‌الزمان (عج) است.
+
+</div>
+
 
 
 
@@ -215,16 +378,11 @@ alt="لبیک یا مهدی">
 
 
 <strong>
-حدیث انتظار
+🌹 کلام نورانی پیامبر اکرم (ص)
 </strong>
 
+
 <br><br>
-
-
-پیامبر اکرم (ص) فرمودند:
-
-
-<br>
 
 
 «أفضلُ أعمالِ أمّتي انتظارُ الفَرَج»
@@ -242,12 +400,18 @@ alt="لبیک یا مهدی">
 
 
 
+
 <a class="btn"
+
 href="https://script.google.com/macros/s/AKfycbxiVMI66vzFAKxVxfT8TfRjlahISLV6ARdfl3903G1dNXywDt2u6qKBVcS8rIER_ohx/exec">
 
-🛒 شروع خرید
+🛒 مشاهده محصولات و خرید
 
 </a>
+
+
+
+</div>
 
 
 
@@ -255,7 +419,7 @@ href="https://script.google.com/macros/s/AKfycbxiVMI66vzFAKxVxfT8TfRjlahISLV6ARd
 
 <div class="footer">
 
-🌹 با آرزوی فرج و سلامتی حضرت صاحب‌الزمان (عج)
+🌹 اللهم عجل لولیک الفرج
 
 </div>
 
