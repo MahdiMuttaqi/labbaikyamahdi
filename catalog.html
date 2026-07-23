@@ -133,6 +133,17 @@ box-shadow:0 10px 30px rgba(0,0,0,.12);
 
 border:1px solid rgba(23,107,74,.12);
 
+transition:.35s ease;
+
+}
+
+
+.catalog-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.18);
+
 }
 
 
@@ -140,7 +151,7 @@ border:1px solid rgba(23,107,74,.12);
 
 .cover{
 
-height:300px;
+height:340px;
 
 border-radius:20px;
 
@@ -247,7 +258,56 @@ font-weight:600;
 }
 
 
+@media(max-width:600px){
 
+
+.container{
+
+padding:20px 12px 35px;
+
+}
+
+
+h1{
+
+font-size:22px;
+
+}
+
+
+.cover{
+
+height:300px;
+
+}
+
+
+.catalog-card{
+
+padding:14px;
+
+border-radius:22px;
+
+}
+
+
+.catalog-name{
+
+font-size:17px;
+
+}
+
+
+.btn{
+
+font-size:15px;
+
+padding:13px;
+
+}
+
+
+}
 
 
 </style>
