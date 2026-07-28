@@ -7,11 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>
 
-📚 کتابخانه کاتالوگ‌های محصولات مهدوی
-
-</h1>
 
 
 <style>
@@ -25,6 +21,11 @@ box-sizing:border-box;
 
 
 body{
+  <header class="site-header">
+    <img src="images/banner.png"
+         alt="لبیک یا مهدی"
+         class="banner">
+</header>
 
 margin:0;
 
@@ -478,45 +479,35 @@ transform:translateY(-3px);
 
 }
 
-/* ===== هدر صفحه کاتالوگ ===== */
+/* ===== بنر و هدر کاتالوگ ===== */
+
+.site-header{
+width:100%;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+.banner{
+width:100%;
+display:block;
+height:auto;
+max-height:280px;
+object-fit:cover;
+}
 
 .hero{
 
 background:white;
 
-border-radius:30px;
+margin:20px 0;
 
 padding:25px 20px;
 
-margin-bottom:25px;
+border-radius:28px;
 
 box-shadow:0 12px 35px rgba(0,0,0,.12);
 
 text-align:center;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-right:0;
-
-height:120px;
-
-background:url("images/banner.png") center/cover no-repeat;
-
-opacity:.15;
 
 }
 
@@ -536,11 +527,7 @@ padding:4px;
 
 border:4px solid #fff;
 
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-position:relative;
-
-z-index:2;
+box-shadow:0 6px 18px rgba(0,0,0,.18);
 
 margin-bottom:15px;
 
@@ -550,13 +537,9 @@ margin-bottom:15px;
 
 font-size:24px;
 
-font-weight:bold;
+font-weight:700;
 
 color:#176b4a;
-
-position:relative;
-
-z-index:2;
 
 margin-bottom:10px;
 
@@ -567,10 +550,6 @@ margin-bottom:10px;
 font-size:17px;
 
 color:#555;
-
-position:relative;
-
-z-index:2;
 
 margin-bottom:15px;
 
@@ -584,26 +563,17 @@ line-height:2;
 
 color:#666;
 
-position:relative;
-
-z-index:2;
-
 }
 
 @media(max-width:600px){
 
 .hero-logo{
-
-width:65px;
-
-height:65px;
-
+width:70px;
+height:70px;
 }
 
 .hero-title{
-
 font-size:20px;
-
 }
 
 }
