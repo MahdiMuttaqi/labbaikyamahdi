@@ -478,48 +478,85 @@ transform:translateY(-3px);
 
 }
 
-
-  /* ===== Hero Banner ===== */
+/*================ HERO =================*/
 
 .hero{
 
-background:linear-gradient(135deg,#176b4a,#28a36d);
+position:relative;
 
-border-radius:28px;
+overflow:hidden;
 
-padding:30px 20px;
+background:linear-gradient(135deg,#0f5b3d,#1b8a5a);
 
-margin-bottom:25px;
+border-radius:30px;
+
+padding:35px 20px;
+
+margin-bottom:28px;
 
 text-align:center;
 
 color:#fff;
 
-box-shadow:0 15px 35px rgba(0,0,0,.18);
+box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* نقش اسلیمی محو */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle at 15% 20%,rgba(255,255,255,.08) 2px,transparent 2px),
+
+radial-gradient(circle at 80% 25%,rgba(255,255,255,.06) 2px,transparent 2px),
+
+radial-gradient(circle at 50% 80%,rgba(255,255,255,.08) 2px,transparent 2px);
+
+background-size:120px 120px;
+
+opacity:.6;
+
+}
+
+.hero>*{
+
+position:relative;
+
+z-index:2;
 
 }
 
 .hero-logo{
 
-width:95px;
+width:100px;
 
-height:95px;
+height:100px;
 
 border-radius:50%;
 
-background:#fff;
-
 padding:6px;
+
+background:white;
 
 object-fit:cover;
 
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+border:5px solid rgba(255,255,255,.18);
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
 
 .hero-title{
 
-font-size:28px;
+font-size:31px;
 
 font-weight:700;
 
@@ -527,15 +564,31 @@ margin-top:18px;
 
 }
 
+.hero-sub{
+
+font-size:17px;
+
+margin-top:8px;
+
+opacity:.95;
+
+}
+
 .hero-text{
+
+margin-top:20px;
 
 font-size:15px;
 
 line-height:2;
 
-margin-top:10px;
+opacity:.92;
 
-opacity:.95;
+max-width:520px;
+
+margin-left:auto;
+
+margin-right:auto;
 
 }
 
@@ -543,13 +596,27 @@ opacity:.95;
 
 .hero{
 
-padding:22px 15px;
+padding:28px 16px;
+
+}
+
+.hero-logo{
+
+width:82px;
+
+height:82px;
 
 }
 
 .hero-title{
 
-font-size:22px;
+font-size:23px;
+
+}
+
+.hero-sub{
+
+font-size:15px;
 
 }
 
@@ -560,6 +627,7 @@ font-size:14px;
 }
 
 }
+
   
 </style>
 
@@ -573,14 +641,11 @@ font-size:14px;
 <div class="container">
 
 
-
 <div class="hero">
 
 <img class="hero-logo"
 
-src="https://drive.google.com/thumbnail?id=1305fG4bYVqjBx90hu2cRnQ4hCTVmNA6T&sz=w500"
-
-alt="لبیک یا مهدی">
+src="https://drive.google.com/thumbnail?id=1305fG4bYVqjBx90hu2cRnQ4hCTVmNA6T&sz=w500">
 
 <div class="hero-title">
 
@@ -588,23 +653,19 @@ alt="لبیک یا مهدی">
 
 </div>
 
-<div class="hero-text">
+<div class="hero-sub">
 
 کتابخانه کاتالوگ محصولات مهدوی
 
-<br>
+</div>
 
-مشاهده، دانلود و ثبت سفارش آنلاین محصولات مذهبی
+<div class="hero-text">
+
+مشاهده و دانلود جدیدترین کاتالوگ‌های محصولات مذهوی، انتخاب کد محصول و ثبت سفارش آنلاین
 
 </div>
 
 </div>
-
-
-
-
-
-
 
 
 <div class="eitaa-box">
