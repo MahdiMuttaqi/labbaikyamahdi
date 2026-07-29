@@ -136,11 +136,27 @@ max-width:100%;
 
 .salawat{
 
+display:inline-block;
+
 white-space:nowrap;
 
-display:block;
+animation: salawatMove 12s linear infinite;
 
-font-size:15px;
+}
+
+@keyframes salawatMove{
+
+0%{
+
+transform:translateX(100%);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
 
 }
 
